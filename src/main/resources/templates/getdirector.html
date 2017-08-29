@@ -1,0 +1,23 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Welcome to the Book Database</title>
+
+</head>
+<body>
+<form action="#" th:action="@{/}" th:object="${director}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    <p>Director: <input type="text" th:field="*{name}"/></p>
+
+    <p>Genre: <input type="text" th:field="*{genre}"/></p>
+<h6>test</h6>
+    <p><input type="submit" value="Enter" /> <input type="reset" value="Reset" /> </p>
+
+
+</form>
+
+</body>
+</html>

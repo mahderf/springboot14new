@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Bookstore Result</title>
+</head>
+<body>
+<!--<input type="hidden" th:field="*{director}" />-->
+<p th:text="'Movie: '+ ${movie.title}" />
+<p th:text="'Year: '+ ${movie.year}" />
+<p th:text="'Description: '+ ${movie.description}" />
+<h6>test</h6>
+<a th:href="@{/addmovie/{id}(id=${movie.director.id})}">Add Movie</a>
+
+</body>
+</html>

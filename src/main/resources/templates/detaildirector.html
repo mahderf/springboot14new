@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Bookstore Result</title>
+</head>
+<body>
+<p th:text="'Title: '+ ${movie.title}" />
+<p th:text="'Year: '+ ${movie.year}" />
+<p th:text="'Description: '+ ${movie.description}" />
+<p th:text="'Director: '+ ${director.name}" />
+<p th:text="'Genre: '+ ${director.genre}" />
+
+
+</body>
+</html>

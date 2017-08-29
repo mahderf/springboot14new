@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Welcome to the Book Database</title>
+
+</head>
+<body>
+<form action="#" th:action="@{/addmovie}" th:object="${movie}" method="post">
+    <!--<input type="hidden" th:field="*{id}" />-->
+    <input type="text" th:field="*{director.id}">
+    <p>Movie Title: <input type="text" th:field="*{title}"/>
+    <p>Year: <input type="text" th:field="*{year}"/></p>
+
+    <p>Description: <input type="text" th:field="*{description}"/></p>
+
+
+    <h6>test</h6>
+    <p><input type="submit" value="Enter" /> <input type="reset" value="Reset" /></p>
+
+
+
+</form>
+
+</body>
+</html>

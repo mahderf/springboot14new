@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Genre</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <th:block th:each="item : ${director}">
+        <tbody>
+        <tr>
+            <td th:text="${item.name}"></td>
+            <td th:text="${item.genre}"></td>
+            <td>
+                <a th:href="@{/detailmovie/{id}(id=${item.id})}">Details</a>
+            </td>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+
+</body>
+</html>
