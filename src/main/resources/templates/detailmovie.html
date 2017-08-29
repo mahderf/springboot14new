@@ -5,12 +5,17 @@
     <title>Bookstore Result</title>
 </head>
 <body>
-<div>
-    <th:block th:each="item:${movie}">
-<p th:text="'Title: '+ ${item.title}" />
-<p th:text="'Year: '+ ${item.year}" />
-<p th:text="'Description: '+ ${item.description}" />
-    </th:block>
+
+<div th:each="item:${dirlist}">
+    <p th:text="${item.name}"/>
+    <p th:text="${item.genre}"/>
+     <div th:each="p:${item.movies}">
+
+         <p th:text="'Title: '+ ${p.title}" />
+         <p th:text="'Year: '+ ${p.year}" />
+         <p th:text="'Description: '+ ${p.description}" />
+
+</div>
 </div>
 
 <!--<p th:text="'Director: '+ ${director.name}" />-->

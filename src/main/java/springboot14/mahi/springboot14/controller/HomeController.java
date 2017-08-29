@@ -98,9 +98,14 @@ public class HomeController {
     @GetMapping("/detailmovie/{id}")
     public String showMovies(@PathVariable("id") long id, Model model){
 
-        model.addAttribute("movie", movieRepository.findAllByIdIs(id));
-        model.addAttribute("director", directorRepository.findAllByIdIs(id));
+//        model.addAttribute("movie", movieRepository.findAllById(id));
+        model.addAttribute("dirlist", directorRepository.findDirectorById(id));
 
+//        Iterable<Director>dlist=directorRepository.findDirectorById(id);
+//        for(Director item:dlist) {
+//            System.out.println(item.getMovies());
+//        }
+//System.out.println();
         return "detailmovie";
     }
 }
